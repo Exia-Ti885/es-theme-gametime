@@ -1,0 +1,373 @@
+<!--
+theme name:     Game Time
+creator:		Dwayne Hurst (aka Hursty)
+version         1.0
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<theme>
+   <formatVersion>4</formatVersion>
+
+<!--
+Carousel wheel and main menu background
+-->
+
+
+<feature supported="carousel">
+   <view name="system">
+      <carousel name="systemcarousel">
+        <zIndex>44</zIndex>       
+        <type>vertical</type>
+        <pos>0.705 0.517</pos>
+        <size>0.271 0.4</size>
+        <logoScale>1.01</logoScale>
+        <logoSize>0.27 0.27</logoSize>
+        <color>00000000</color>
+        <maxLogoCount>3</maxLogoCount>
+      </carousel>
+      <image name="overlay" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>
+         <zIndex>43</zIndex>                 
+         <path>./_inc/images/mainoverlay.png</path>
+      </image>                    
+      <text name="systemInfo">     
+         <pos>0.34 0.936</pos>
+         <backgroundColor>00000000</backgroundColor>
+         <color>000000</color>
+         <fontPath>./_inc/fonts/impact.ttf</fontPath>
+	     <fontSize>0.025</fontSize>
+         <zIndex>44</zIndex>	     
+      </text>            
+   </view>
+</feature>
+
+
+<!--
+On Screen help
+-->
+
+   <view name="system">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/impact.ttf</fontPath>
+         <fontSize>0.035</fontSize>     
+         <pos>1.263 0.911</pos>      
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view>  
+
+   <view name="detailed,video,basic">
+      <helpsystem name="help">
+         <fontPath>./_inc/fonts/impact.ttf</fontPath>
+         <fontSize>0.03</fontSize>     
+         <pos>1.29 0.954</pos>      
+         <textColor>ffffff</textColor>
+         <iconColor>ffffff</iconColor>
+      </helpsystem>
+   </view>    
+   
+<!--
+System Gamelist
+--> 
+
+   <view name="detailed,video,basic">
+      <textlist name="gamelist">
+         <zIndex>43</zIndex>	      
+	     <selectorColor>1c1c1c00</selectorColor>
+	     <selectedColor>ffffff</selectedColor>   
+         <pos>0.707 0.49</pos>
+         <size>0.2687 0.44</size>
+         <primaryColor>000000</primaryColor>
+         <secondaryColor>000000</secondaryColor>
+         <fontPath>./_inc/fonts/impact.ttf</fontPath>
+         <fontSize>0.04</fontSize>
+         <forceUppercase>1</forceUppercase>
+         <lineSpacing>1.1</lineSpacing>         
+         <scrollSound></scrollSound>
+         <alignment>left</alignment>        
+      </textlist>
+   </view> 
+
+      
+    
+<!--
+Metadata, description, rating etc
+-->      
+    
+
+   <view name="video">   
+      <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount, md_rating, md_developer, md_publisher, md_genre, md_playcount, md_lastplayed">
+         <pos>1 1</pos>
+      </text>
+      <text name="md_lbl_rating,md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount,md_lbl_players,md_developer, md_publisher, md_genre, md_playcount, md_lastplayed,md_description,md_players,md_releasedate">
+         <color>999999</color>
+         <fontPath>./_inc/fonts/impact.ttf</fontPath>
+         <fontSize>0.024</fontSize>
+      </text>
+      <text name="md_lbl_rating">
+         <pos>1.3 0.66</pos>
+         <size>0.2 0.035</size>
+         <color>0d46c1</color>
+         <zIndex>5</zIndex>                 
+      </text>
+      <rating name="md_rating">
+         <zIndex>5</zIndex>       
+         <pos>0.825 0.322</pos>
+         <size>0.05 0.05</size>
+         <filledPath>./_inc/images/star_filled.png</filledPath>
+         <unfilledPath>./_inc/images/star_empty.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.735 0.16</pos>
+         <size>0.1 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <text name="md_players">
+         <pos>0.81 0.16</pos>
+         <size>0.0375 0.035</size>
+         <zIndex>43</zIndex>
+         <color>ffffff</color>                  
+      </text>
+      <text name="md_lbl_releasedate">
+         <pos>0.735 0.2</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <datetime name="md_releasedate">
+         <pos>0.81 0.2</pos>
+         <size>0.0375 0.035</size>
+         <zIndex>43</zIndex>
+         <color>ffffff</color>                  
+      </datetime>
+      <text name="md_lbl_genre">
+         <pos>0.735 0.24</pos>
+         <size>0.12 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_genre">
+         <pos>0.81 0.24</pos>
+         <size>0.16 0.035</size>
+         <color>ffffff</color>         
+         <zIndex>5</zIndex>         
+      </text>         
+      <text name="md_lbl_playcount">
+         <pos>1.22 0.798</pos>
+         <size>0.2 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_playcount">
+         <pos>1.3 0.798</pos>
+         <size>0.0375 0.035</size>
+         <color>ffffff</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_developer">
+         <pos>0.735 0.28</pos>
+         <size>0.61 0.035</size>          
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_developer">
+         <pos>0.81 0.28</pos>
+         <size>0.16 0.035</size> 
+         <color>ffffff</color>                 
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_lastplayed">
+         <pos>1.22 0.87</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <datetime name="md_lastplayed">
+         <pos>1.3 0.87</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>
+         <color>ffffff</color>                  
+      </datetime>                            
+      <text name="md_description">
+         <pos>0.117 0.886</pos>
+         <size>0.389 0.0693</size>
+         <color>ffffff</color>
+         <alignment>center</alignment>
+         <fontSize>0.017</fontSize>            
+         <zIndex>5</zIndex>         
+      </text>
+   </view>
+
+  <view name="detailed">   
+      <text name="md_lbl_rating, md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount, md_rating, md_developer, md_publisher, md_genre, md_playcount, md_lastplayed">
+         <pos>1 1</pos>
+      </text>
+      <text name="md_lbl_rating,md_lbl_releasedate, md_lbl_developer, md_lbl_publisher, md_lbl_genre, md_lbl_lastplayed, md_lbl_playcount,md_lbl_players,md_developer, md_publisher, md_genre, md_playcount, md_lastplayed,md_description,md_players,md_releasedate">
+         <color>999999</color>
+         <fontPath>./_inc/fonts/impact.ttf</fontPath>
+         <fontSize>0.024</fontSize>
+      </text>
+      <text name="md_lbl_rating">
+         <pos>1.3 0.66</pos>
+         <size>0.2 0.035</size>
+         <color>0d46c1</color>
+         <zIndex>5</zIndex>                 
+      </text>
+      <rating name="md_rating">
+         <zIndex>5</zIndex>       
+         <pos>0.78 0.322</pos>
+         <size>0.05 0.05</size>
+         <filledPath>./_inc/images/star_filled.png</filledPath>
+         <unfilledPath>./_inc/images/star_empty.png</unfilledPath>
+      </rating>
+      <text name="md_lbl_players">
+         <pos>0.735 0.16</pos>
+         <size>0.1 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <text name="md_players">
+         <pos>0.81 0.16</pos>
+         <size>0.0375 0.035</size>
+         <zIndex>43</zIndex>
+         <color>ffffff</color>                  
+      </text>
+      <text name="md_lbl_releasedate">
+         <pos>0.735 0.2</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <datetime name="md_releasedate">
+         <pos>0.81 0.2</pos>
+         <size>0.0375 0.035</size>
+         <zIndex>43</zIndex>
+         <color>ffffff</color>                  
+      </datetime>
+      <text name="md_lbl_genre">
+         <pos>0.735 0.24</pos>
+         <size>0.12 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_genre">
+         <pos>0.81 0.24</pos>
+         <size>0.16 0.035</size>
+         <color>ffffff</color>         
+         <zIndex>5</zIndex>         
+      </text>         
+      <text name="md_lbl_playcount">
+         <pos>1.22 0.798</pos>
+         <size>0.2 0.035</size>
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_playcount">
+         <pos>1.3 0.798</pos>
+         <size>0.0375 0.035</size>
+         <color>ffffff</color>         
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_developer">
+         <pos>0.735 0.28</pos>
+         <size>0.61 0.035</size>          
+         <zIndex>5</zIndex>                   
+      </text>
+      <text name="md_developer">
+         <pos>0.81 0.28</pos>
+         <size>0.16 0.035</size> 
+         <color>ffffff</color>                 
+         <zIndex>5</zIndex>         
+      </text>
+      <text name="md_lbl_lastplayed">
+         <pos>1.22 0.87</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>         
+      </text>
+      <datetime name="md_lastplayed">
+         <pos>1.3 0.87</pos>
+         <size>0.12 0.035</size>
+         <zIndex>43</zIndex>
+         <color>ffffff</color>                  
+      </datetime>                            
+      <text name="md_description">
+         <pos>0.117 0.886</pos>
+         <size>0.389 0.0693</size>
+         <color>ffffff</color>
+         <alignment>center</alignment>
+         <fontSize>0.017</fontSize>            
+         <zIndex>5</zIndex>         
+      </text>
+   </view>
+ 
+
+<!--
+Images, boxart, snaps, wheel art etc
+--> 
+
+
+   <view name="basic">
+      <image name="logo">
+         <origin>0.0 0.0</origin>      
+         <pos>0.728 0.053</pos>
+         <maxSize>0.24 0.24</maxSize>
+         <zIndex>45</zIndex>          
+      </image>
+      <image name="overlay2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/basicoverlay.png</path>
+         <zIndex>3</zIndex>          
+      </image>                                
+   </view>    
+
+   <view name="detailed">
+      <image name="logo">
+         <origin>0.0 0.0</origin>      
+         <pos>0.728 0.053</pos>
+         <maxSize>0.24 0.24</maxSize>
+         <zIndex>45</zIndex>          
+      </image>
+      <image name="md_image">
+         <origin>0.5 0.5</origin>
+         <pos>0.318 0.457</pos>
+         <maxSize>0.54 0.7</maxSize>
+         <zIndex>6</zIndex>     
+      </image>
+      <image name="overlay2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/videodetailedoverlay.png</path>
+         <zIndex>3</zIndex>          
+      </image>                   
+   </view>
+
+   <view name="video"> 
+      <image name="logo">
+         <origin>0.0 0.0</origin>      
+         <pos>0.728 0.053</pos>
+         <maxSize>0.24 0.24</maxSize>
+         <zIndex>45</zIndex>          
+      </image>
+      <image name="overlay2" extra="true">
+         <origin>0 0</origin>
+         <pos>0 0</pos>
+         <size>1 1</size>        
+         <path>./_inc/images/videodetailedoverlay.png</path>
+         <zIndex>3</zIndex>          
+      </image>         
+      <video name="md_video">
+         <origin>0.5 0.5</origin>
+         <pos>0.318 0.457</pos>
+         <maxSize>0.54 0.7</maxSize>
+         <delay>1.0</delay>
+         <zIndex>7</zIndex>         
+         <showSnapshotNoVideo>true</showSnapshotNoVideo>
+         <showSnapshotDelay>true</showSnapshotDelay>              
+      </video>          
+      <image name="md_marquee">
+         <pos>0.773 0.346</pos>
+         <origin>0.5 0.5</origin>
+         <maxSize>0.07 0.07</maxSize>
+         <zIndex>7</zIndex>         
+      </image>             
+   </view>
+  
+   
+   
+</theme>
